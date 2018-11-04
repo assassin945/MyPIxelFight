@@ -16,7 +16,6 @@ namespace Server
         public ServerControl()
         {
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
         }
 
         public void Start()
@@ -37,7 +36,24 @@ namespace Server
             IPEndPoint point = client.RemoteEndPoint as IPEndPoint;
             Console.WriteLine(point.Address + "[" + point.Port + "]连接成功");
 
+            Thread threadReceive = new Thread(Receive);
+            threadReceive.IsBackground = true;
+            threadReceive.Start(client);
+
             Accept();
+        }
+
+        public void Receive(object obj)
+        {
+            Socket client = obj as Socket;
+
+            IPEndPoint point = client.RemoteEndPoint as IPEndPoint;
+
+            byte[] msg = new byte[1024];
+            int msgLen = client.Receive(msg);
+            Console.WriteLine(point.Address + "[" + point.Port + "]:" + Encoding.UTF8.GetString(msg, 0, msgLen));
+
+            Receive(client);
         }
     }
 }

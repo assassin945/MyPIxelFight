@@ -21,5 +21,10 @@ namespace Client
             clientSocket.Connect(ip, port);
             Console.WriteLine("连接服务器成功");
         }
+
+        public void Send(string msg)
+        {
+            clientSocket.Send(Encoding.UTF8.GetBytes(msg));
+        }
     }
 }
