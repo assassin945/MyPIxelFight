@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 		{B2D48D2C-2D85-4E3F-8336-778A2A1269E9} = {B2D48D2C-2D85-4E3F-8336-778A2A1269E9}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelFight", "PixelFight\PixelFight.csproj", "{31F40BD3-9B10-4869-926D-27796EFEDDDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{9EF222BD-41F6-462A-AB59-2321B9FE725F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF222BD-41F6-462A-AB59-2321B9FE725F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF222BD-41F6-462A-AB59-2321B9FE725F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F40BD3-9B10-4869-926D-27796EFEDDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F40BD3-9B10-4869-926D-27796EFEDDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F40BD3-9B10-4869-926D-27796EFEDDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F40BD3-9B10-4869-926D-27796EFEDDDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
